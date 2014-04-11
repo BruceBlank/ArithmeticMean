@@ -64,7 +64,7 @@ int main() {
 		am.addValue(rvalue);
 		cout << "Added value: " << rvalue << "\t\tmean value: " << am.meanValue() << "\t\tnumber of Values: " << am.numberOfValues() << endl;
 	}
-	// reset mean value instance
+	// reset mean value instance -> this will invalidate the instance
 	am.reset();
 	// try to get mean value -> this should throw an exception
 	try{
