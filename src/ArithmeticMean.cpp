@@ -10,19 +10,20 @@
 #include <ctime>
 using namespace std;
 
-
+// a class to represent the arithmetic mean of an arbitrary number of values
 class ArithmeticMean {
 private:
 	double m_meanValue;
 	double m_numberOfValues;
 public:
-	// default constructor: no values, no mean value
+	// default constructor constructs an instance without values
 	ArithmeticMean() : m_meanValue(0), m_numberOfValues(0) {}
+
 	// return true, if values have been added yet
 	bool isValid() const {return (m_numberOfValues > 0);}
-	// add a value, return the actual mean value after adding
+	// add a value
 	void addValue(double value);
-	// return the actual mean value. If no value has beend added yet, it will throw instance_invalid()
+	// return the actual mean value. If no value has been added yet, it will throw instance_invalid()
 	double meanValue() const;
 	// return the number of added values
 	int numberOfValues() const{return m_numberOfValues;}
