@@ -70,7 +70,7 @@ int main() {
 	try{
 		double mv = am.meanValue();
 		cout << "Mean value after resetting instance: " << mv << endl;
-	}catch(ArithmeticMean::instance_invalid){
+	}catch(const ArithmeticMean::instance_invalid &){
 		cout << "Cannot get the mean value of an invalid instance of ArithmeticMean!" << endl;
 	}
 	return 0;
